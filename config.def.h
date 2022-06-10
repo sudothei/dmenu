@@ -6,6 +6,7 @@ static const char col_green1[]      = "#249368";
 /* Default settings; can be overriden by command line. */
 
 static int topbar = 1;                      /* -b  option; if 0, dmenu appears at bottom     */
+static const unsigned int alpha = 104;
 /* -fn option overrides fonts[0]; default X11 font or font set */
 static const char *fonts[] = {
 	"Monospace:size=18"
@@ -17,6 +18,13 @@ static const char *colors[SchemeLast][2] = {
 	[SchemeSel] = { col_bg, col_green1 },
 	[SchemeOut] = { col_chartreuse, col_chartreuse },
 };
+
+static const unsigned int alphas[SchemeLast][2] = {
+	[SchemeNorm] = { OPAQUE, alpha },
+	[SchemeSel] = { OPAQUE, alpha },
+	[SchemeOut] = { OPAQUE, alpha },
+};
+
 /* -l and -g options; controls number of lines and columns in grid if > 0 */
 static unsigned int lines      = 7;
 static unsigned int columns    = 3;

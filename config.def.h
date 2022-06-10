@@ -1,8 +1,4 @@
-static const char col_gray1[]       = "#222222";
-static const char col_gray2[]       = "#444444";
-static const char col_gray3[]       = "#bbbbbb";
-static const char col_gray4[]       = "#eeeeee";
-static const char col_cyan[]        = "#005577";
+static const char col_bg[]          = "#061009";
 static const char col_chartreuse[]  = "#00ff00";
 static const char col_green1[]      = "#249368";
 
@@ -17,8 +13,8 @@ static const char *fonts[] = {
 static const char *prompt      = NULL;      /* -p  option; prompt to the left of input field */
 static const char *colors[SchemeLast][2] = {
 	/*     fg         bg       */
-	[SchemeNorm] = { col_green1, col_gray1 },
-	[SchemeSel] = { col_gray1, col_green1 },
+	[SchemeNorm] = { col_green1, col_bg },
+	[SchemeSel] = { col_bg, col_green1 },
 	[SchemeOut] = { col_chartreuse, col_chartreuse },
 };
 /* -l and -g options; controls number of lines and columns in grid if > 0 */
